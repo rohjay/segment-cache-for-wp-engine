@@ -53,7 +53,7 @@ after_script:
 before_deploy:
   - git config --local user.name "nateinaction"
   - git config --local user.email "email@nategay.me"
-  - git tag "$(make plugin_version)"
+  - git tag "$(cat build/VERSION)"
 
 deploy:
   provider: releases
